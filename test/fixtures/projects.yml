@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  longi: MyString
+  lati: MyString
+  has_assignment: false
+
+two:
+  longi: MyString
+  lati: MyString
+  has_assignment: false
