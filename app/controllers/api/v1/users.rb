@@ -18,11 +18,12 @@ module API
       resource :users do
         desc 'Create a user.'
          params do
-           requires :first_name, type: String, desc: 'longi.'
-           requires :last_name, type: String, desc: 'lati.'
+           requires :first_name, type: String, desc: 'First name.'
+           requires :last_name, type: String, desc: 'Last name.'
            requires :email, type: String, desc: 'lati.'
          end
          post do
+          puts params
           user = User.create!(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
           User.find(user.id)
          end

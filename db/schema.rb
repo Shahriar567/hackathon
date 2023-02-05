@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_04_225210) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_05_020223) do
   create_table "assignments", force: :cascade do |t|
     t.integer "user_id"
     t.string "project_id"
     t.integer "points"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "communities", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -33,6 +39,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_04_225210) do
     t.boolean "has_assignment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "community"
+    t.boolean "is_completed"
   end
 
   create_table "users", force: :cascade do |t|

@@ -29,6 +29,8 @@ module API
 
       end
 
+      # communities
+
 
       resource :scores do
         # desc 'Return list of assignments'

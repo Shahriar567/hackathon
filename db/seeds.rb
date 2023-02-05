@@ -7,10 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-15.times do
-  Project.create!(longi: Faker::Number.between(from: 2, to: 19).to_s, lati: Faker::Number.between(from: 2, to: 19).to_s, has_assignment: false)
- end
- project_ids = Project.ids
- 95.times do
-  Assignment.create!(user_id: project_ids.sample, assignment_id: project_ids.sample, stock: Faker::Number.between(from: 2, to: 19).to_s)
- end
+ Community.create!(name: "North West")
+ Community.create!(name: "North East")
+ Community.create!(name: "South West")
+ Community.create!(name: "South East")
+ Community.create!(name: "Central")
